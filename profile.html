@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Login Code</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Weavers Logistics_files/bootstrap.css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/style.css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/font-awesome.min.css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/owl.carousel.min.css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/simpleLightbox.css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/nice-select.css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/animate.css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/jquery-ui.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="./Weavers Logistics_files/style(1).css">
+  <link rel="stylesheet" href="./Weavers Logistics_files/responsive.css">
+</head>
+<body>
+    <div class="container profile-container">
+        <div class="profile-card">
+             <div class="banner-left" >
+            <h2 class="text-uppercase">Verify Your Identity</h2>
+            </div>
+
+            <p class="subtitle">Enter the Tracking Code you received</p>
+             <div class="banner-right position-relative">
+                <form id="codeForm" method="POST">
+                  
+            <!-- <form id="codeForm"> -->
+                <div class="input-group code-input">
+                     <input class="form-control" type="text" name="t_code" id="codeInput" placeholder="Enter Shipping Number"  required="" style="padding-top: 10px; padding-bottom: 10px;">
+                  <span class="error-message" id="codeError"></span>
+                </div>
+               <div class="button-group-area mt-10">
+                    <button class="genric-btn danger-border circle arrow" type="submit" id="verifyBtn" name="track">Track Shippment  <span class="lnr lnr-arrow-right"></span></button>
+                </div>
+            </form>
+            <div id="loader" class="loader" style="display: none;"></div>
+        </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="banner_content d-flex flex-column">
+              <div class="banner-left">
+                <h1 class="text-uppercase">Track Your Shippment</h1>
+              </div>
+              <div class="banner-right position-relative">
+                <form id="codeForm" method="POST">
+                  <div class="">
+                    <label for="firstName">Ex: 12345</label>
+                    <input class="form-control" type="text" name="t_code" id="codeInput" placeholder="Enter Shipping Number" onfocus="this.placeholder = &#39;&#39;" onblur="this.placeholder = &#39;First Name&#39;" required="" style="padding-top: 10px; padding-bottom: 10px;">
+                  </div>
+                <div class="button-group-area mt-10">
+                    <button class="genric-btn danger-border circle arrow" type="submit" id="verifyBtn" name="track">Track Shippment  <span class="lnr lnr-arrow-right"></span></button>
+                </div>
+                </form>
+                <br>
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

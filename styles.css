@@ -1,0 +1,239 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.form-card, .profile-card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.code-display {
+    margin-top: 20px;
+    text-align: center;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.code-display p {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+#loginCode {
+    color: #667eea;
+    font-family: monospace;
+    word-break: break-word;
+}
+
+#copyCodeBtn {
+    background: #28a745;
+    margin-top: 10px;
+}
+
+#copyCodeBtn:hover {
+    background: #218838;
+}
+
+#redirectMessage {
+    color: #666;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    min-height: 20px;
+    display: block;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+.user-info {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.user-info strong {
+    color: #444;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button-group button {
+    flex: 1;
+    min-width: 120px;
+}
+
+#clearDataBtn {
+    background: #dc3545;
+}
+
+#clearDataBtn:hover {
+    background: #c82333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 👇 Fully responsive breakpoints */
+
+@media (max-width: 768px) {
+    .form-card, .profile-card {
+        padding: 25px;
+        max-width: 500px;
+    }
+
+    .profile-container {
+        padding: 25px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-card, .profile-card {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .profile-container {
+        padding: 20px;
+    }
+
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .code-display p {
+        font-size: 16px;
+    }
+
+    #loginCode {
+        font-size: 16px;
+    }
+}
